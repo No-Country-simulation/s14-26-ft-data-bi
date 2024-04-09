@@ -2,7 +2,6 @@ import cv2
 import os
 import imutils
 
-
 # personName = "tristeza"
 # personName = "felicidad"
 personName = "enojo"

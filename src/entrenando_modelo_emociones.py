@@ -1,9 +1,8 @@
 import cv2
 import os
 import numpy as np
-import time
 
-dataPath = "../data/pruebas/emociones"
+dataPath = "../data/imagenes"
 peopleList = os.listdir(dataPath)
 print('Lista de personas: ', peopleList)
 
@@ -30,6 +29,6 @@ print("Entrenando...")
 face_recognizer.train(facesData, np.array(labels))
 
 # Almacenar el modelo obtenido
-face_recognizer.save("../modelos/modeloEigenFaceEmociones.xml")
+face_recognizer.save("../modelos/modeloEigenFaceEmociones2.xml")
 
 print("Modelo almacenado...")
