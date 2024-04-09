@@ -2,6 +2,7 @@ import cv2
 import os
 import pandas as pd
 import time
+#prueba
 
 dataPath = "../data/imagenes"
 imagePaths = os.listdir(dataPath)
