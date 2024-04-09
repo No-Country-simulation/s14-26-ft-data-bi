@@ -161,3 +161,4 @@ cython_debug/
 modelos/modeloEigenFace.xml
 modelos/modeloEigenFaceEmociones.xml
 data/pruebas/reconocidos
+data/pruebas/emociones
