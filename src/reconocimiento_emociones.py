@@ -2,56 +2,50 @@ import cv2
 import os
 import pandas as pd
 import time
-#prueba
 
+ruta_video ="../data/pruebas/clase1.mp4"
 dataPath = "../data/imagenes"
-imagePaths = os.listdir(dataPath)
-print('imagePaths=', imagePaths)
 
-face_recognizer = cv2.face.EigenFaceRecognizer_create()
-
-# Leyendo el modelo
-face_recognizer.read("../modelos/modeloEigenFaceEmociones2.xml")
-
-# Abriendo el video
-cap = cv2.VideoCapture("../data/pruebas/muchas_personas.mp4")
-
-faceClassif = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
-
-# Crear DataFrame para almacenar las emociones y el tiempo
-df_emociones = pd.DataFrame(columns=['Persona', 'Emocion', 'Tiempo'])
-
-# Inicializar contador de personas
-contador_personas = 0
-personas_detectadas = {}
-
-while True:
-    ret, frame = cap.read()
-    if not ret:
-        break
-
-    start_time = time.time()  # Registra el tiempo de inicio del procesamiento del fotograma
+def reconocimiento_emociones(ruta_video):
+    imagePaths = os.listdir(dataPath)
+    emociones_dict = {idx: emocion for idx, emocion in enumerate(imagePaths)}
     
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    auxFrame = gray.copy()
+    face_recognizer = cv2.face.EigenFaceRecognizer_create()
+    face_recognizer.read("../modelos/modeloEigenFaceEmociones2.xml")
 
-    faces = faceClassif.detectMultiScale(gray, 1.3, 5)
+    cap = cv2.VideoCapture(ruta_video)
+    fps = cap.get(cv2.CAP_PROP_FPS)
+    faceClassif = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 
-    for (x, y, w, h) in faces:
-        rostro = auxFrame[y:y+h, x:x+w]
-        rostro = cv2.resize(rostro, (48, 48), interpolation=cv2.INTER_CUBIC)
-        result = face_recognizer.predict(rostro)
+    df_emociones = []
+    contador_personas = 0
+    personas_detectadas = {}
 
-        indice_predicho = result[0]
-        distancia_prediccion = result[1]
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            break
 
-        # Verificamos si la distancia de la predicción es menor que un umbral
-        if distancia_prediccion < 5700:
-            nombre_predicho = imagePaths[indice_predicho]
-            cv2.putText(frame, nombre_predicho, (x, y-20), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 0), 1, cv2.LINE_AA)
-            cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+        frame_time = cap.get(cv2.CAP_PROP_POS_MSEC) / 1000  # Tiempo actual del fotograma en segundos
 
-            # Verificar si la persona ya fue detectada
+        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        auxFrame = gray.copy()
+        faces = faceClassif.detectMultiScale(gray, 1.3, 5)
+
+        for (x, y, w, h) in faces:
+            rostro = auxFrame[y:y+h, x:x+w]
+            rostro = cv2.resize(rostro, (48, 48), interpolation=cv2.INTER_CUBIC)
+            result = face_recognizer.predict(rostro)
+
+            indice_predicho = result[0]
+            distancia_prediccion = result[1]
+
+            nombre_predicho = emociones_dict.get(indice_predicho, "Desconocido")
+            color = (0, 255, 0) if distancia_prediccion < 5700 else (0, 0, 255)
+
+            cv2.putText(frame, nombre_predicho, (x, y-20), cv2.FONT_HERSHEY_SIMPLEX, 1, color, 1, cv2.LINE_AA)
+            cv2.rectangle(frame, (x, y), (x+w, y+h), color, 2)
+
             if nombre_predicho not in personas_detectadas:
                 contador_personas += 1
                 personas_detectadas[nombre_predicho] = f"Persona{contador_personas}"
@@ -59,28 +53,17 @@ while True:
             else:
                 nombre_persona = personas_detectadas[nombre_predicho]
 
-            end_time = time.time()  # Registra el tiempo de finalización del procesamiento del fotograma
-            elapsed_time = end_time - start_time  # Calcula el tiempo transcurrido en el procesamiento del fotograma
+            df_emociones.append({'Persona': nombre_persona, 'Emocion': nombre_predicho, 'Tiempo_Inicio': frame_time, 'Tiempo_Fin': frame_time + (1 / fps)})
 
-            # Almacenar la emoción y el tiempo en el DataFrame
-            df_emociones = pd.concat([df_emociones, pd.DataFrame({'Persona': [nombre_persona], 'Emocion': [nombre_predicho], 'Tiempo': [elapsed_time]})], ignore_index=True)
-        else:
-            nombre_predicho = "Desconocido"
-            cv2.putText(frame, nombre_predicho, (x, y-20), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1, cv2.LINE_AA)
-            cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
-        
-    cv2.imshow('frame', frame)
+        cv2.imshow('frame', frame)
 
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
 
-cap.release()
-cv2.destroyAllWindows()
+    cap.release()
+    cv2.destroyAllWindows()
 
-# Guardar DataFrame en un archivo CSV
-df_emociones.to_csv("../data/resultados/emociones2.csv", index=False)
+    df_emociones = pd.DataFrame(df_emociones)
+    df_emociones.to_csv("../data/resultados/emociones3.csv", index=False)
 
-
-
-
-
+reconocimiento_emociones(ruta_video)
