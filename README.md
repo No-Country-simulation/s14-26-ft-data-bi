@@ -1,6 +1,12 @@
-# s14-26-ft-data-bi
+# s14-26-ft-data-bi - No Country 
 
-## Proyecto Data-BI: Proyecto de Reconocimiento de Emociones
+<div align="center">
+
+## Proyecto Data-BI: Proyecto de Reconocimiento de Emociones 
+
+</div>
+
+
 
 ### Descripcion
 El proyecto de Reconocimiento de Emociones en el Aula tiene como objetivo principal analizar y comprender el estado emocional de los estudiantes durante una clase específica. Para lograr esto, se propone grabar las interacciones en el aula y extraer datos relevantes sobre las emociones expresadas por los estudiantes.
@@ -63,6 +69,15 @@ mkdir reconocidos
 2. Realiza tus cambios y haz commit de ellos (git commit -am 'Añade nueva característica').
 3. Haz push de tu rama (git push origin feature/nueva-caracteristica).
 4. Abre un Pull Request y describe tus cambios detalladamente.
+
+
+### Contacto
+
+| Integrantes | Rol | Contacto
+|------------|------------|------------|
+| [Jimena Fioni](https://github.com/JimeFioni) | ![Data Analyst](https://img.shields.io/badge/Data%20Analyst-black?style=for-the-badge&color=%23fdfd96) | [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JimeFioni) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jimena-fioni/)
+| [Jorge Henriquez Novoa](https://github.com/jorgea-hn) | ![ML Engineer](https://img.shields.io/badge/ML%20Engineer-black?style=for-the-badge&color=%2384b6f4) | [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jorgea-hn) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jorge-henriquez-novoa/)
+| [Hernán Hernández](github.com/hernandroz) | ![Data Engineer](https://img.shields.io/badge/Data%20Engineer-black?style=for-the-badge&color=%2384b6f4) | [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](github.com/hernandroz) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](http://linkedin.com/in/hernandroz)
 
 
 
