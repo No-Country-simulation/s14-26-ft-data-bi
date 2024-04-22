@@ -25,16 +25,26 @@ def download_csv():
 def convert_to_html():
     ruta_origen = "notebooks/analisis.ipynb" 
     try:
+        print("Leyendo el notebook...")
         with open(ruta_origen, 'r', encoding='utf-8') as f:
             notebook = nbformat.read(f, as_version=4)
+        
+        print("Ejecutando el notebook...")
         executor = ExecutePreprocessor(timeout=600, kernel_name='python3')
-        executor.preprocess(notebook, {'metadata': {'path': os.path.dirname(ruta_origen)}})
+        try:
+            processed_notebook, _ = executor.preprocess(notebook, {'metadata': {'path': os.path.dirname(ruta_origen)}})
+        except Exception as e:
+            print("Error al ejecutar el notebook:", e)
+            return False, None
+        
+        print("El notebook se ha ejecutado correctamente.")
 
         ruta_escritorio = str(Path.home() / "Desktop")
         html_exporter = nbconvert.HTMLExporter()
-        (html_body, resources) = html_exporter.from_filename(ruta_origen)
+        (html_body, resources) = html_exporter.from_notebook_node(processed_notebook)
         nombre_archivo_html = os.path.splitext(os.path.basename(ruta_origen))[0] + ".html"
         ruta_destino = os.path.join(ruta_escritorio, nombre_archivo_html)
+
         with open(ruta_destino, "w", encoding="utf-8") as f:
             f.write(html_body)
         print("Archivo HTML generado y guardado en el escritorio del usuario.")
