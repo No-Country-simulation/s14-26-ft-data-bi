@@ -1,5 +1,5 @@
 <div align="center">
-  <img src='./img/'>
+  <img src='./data/pictures/Banner Elas Project.gif'>
   <br> 
 </div>
 
