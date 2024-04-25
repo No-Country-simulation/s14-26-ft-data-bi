@@ -93,6 +93,18 @@ Para el análisis de los datos de emociones recolectados por el Modelo, hemos ut
 </div>
 
 En la carpeta data/proceso_deploy pueden verse imágenes de cada paso en el proceso y de las consultas realizadas para la transformación e ingesta de datos, aquí el [Enlace](data/proceso_deploy) <br>
+
+
+<div align="center">
+  <img src='data/proceso_deploy/AzureDataFactory.JPG'>
+  <br> 
+</div>
+
+<div align="center">
+  <img src='data/proceso_deploy/Pyspark.JPG'>
+  <br> 
+</div>
+
 ### Contribución 🤖
 ¡Se agradecen las contribuciones! Si deseas colaborar en el proyecto, por favor sigue estos pasos:
 
