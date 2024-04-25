@@ -81,9 +81,13 @@ Se utilizaron diferentes videos y datos para entrenar al modelo, comenzando por 
 Una vez creado el modelo con la librería Open CV, se utilizó el framework Flet para la creación de una interfaz amigable y fácil de utilizar por el usuario en una escuela por ejemplo; tratando los archivos como locales a fin de lograr mantener privacidad en los datos. Aqui una demostración de su funcionamiento.
 
 <div align="center">
-  <img src='.data/pictures/Video Muestra.mp4'>
-  <br> 
+  <video width="640" height="360" controls>
+    <source src=".data/pictures/Video Muestra.mp4" type="video/mp4">
+    Tu navegador no admite el elemento de video.
+  </video>
+  <br>
 </div>
+
 
 ### Contribución 🤖
 ¡Se agradecen las contribuciones! Si deseas colaborar en el proyecto, por favor sigue estos pasos:
