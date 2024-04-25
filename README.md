@@ -82,7 +82,7 @@ Una vez creado el modelo con la librería Open CV, se utilizó el framework Flet
 
 <div align="center">
   <video width="640" height="360" controls>
-    <source src=".data/pictures/Video Muestra.mp4" type="video/mp4">
+    <source src="data/pictures/Video Muestra.mp4" type="video/mp4">
     Tu navegador no admite el elemento de video.
   </video>
   <br>
