@@ -82,7 +82,7 @@ Una vez creado el modelo con la librería Open CV, se utilizó el framework Flet
 
 <div align="center">
   
-![video](https://github.com/No-Country/s14-26-ft-data-bi/blob/main/data/pictures/Video%20Muestra.mp4)
+  <img src='./data/pictures/.gif'>
   
   <br>
 </div>
