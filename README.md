@@ -90,7 +90,7 @@ Una vez creado el modelo con la librería Open CV, se utilizó el framework Flet
 Para el análisis de los datos de emociones recolectados por el Modelo, hemos utilizado el servicio en la nube de Azure, con variadas herramientas. Si bien, en una aplicación real debería poder utilizarse sólo Azure Storage y Azure Synapse Analytics. Hemos aprovechado la instancia de proyecto para probar herramientas como Azure Data Factory, Databricks, Apache Spark con lenguaje Pyspark para alhunas consultas y transformaciónes en los datos a finde llegar a Azure Synapse para su conexión e ingesta de datos a travès de Power Bi
 <div align = "center">
   
-<img src='./data/'>
+<img src='data/proceso_deploy/ELAS Projects Diagrama.jpeg'>
 </div>
 
 
