@@ -5,7 +5,7 @@
 
 <div align="center">
 
-## Proyecto Data-BI: Proyecto de Reconocimiento de Emociones 🤖
+## Proyecto Data-BI/ Machine Learning: Reconocimiento de Emociones 🤖
 </div>
 
 <div align = "center">
