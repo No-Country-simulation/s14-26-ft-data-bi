@@ -105,6 +105,19 @@ En la carpeta data/proceso_deploy pueden verse imágenes de cada paso en el proc
   <br> 
 </div>
 
+### Reporte
+Se creo un reporte con análisis de cada una de las variables presentadas, hasta el momento se reconoce que puede mejorarse aún más el modelo con variables como calificaciones por ejemplo. El enlace al tablero [Aqui](https://app.powerbi.com/view?r=eyJrIjoiMWMxMDgwYjYtOTBmNC00MmYyLWIxMDMtNTU3ZWFiMjk0ODcyIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9&pageName=ReportSection63f4868a179408c4c77f) <br<
+
+<div align="center">
+  <img src='data/tablero/PBI1.JPG'>
+  <br> 
+</div>
+
+<div align="center">
+  <img src='data/tablero/PBI2.JPG'>
+  <br> 
+</div>
+
 ### Contribución 🤖
 ¡Se agradecen las contribuciones! Si deseas colaborar en el proyecto, por favor sigue estos pasos:
 
