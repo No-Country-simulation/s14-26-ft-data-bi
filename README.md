@@ -1,4 +1,7 @@
-# s14-26-ft-data-bi - No Country 
+<div align="center">
+  <img src='./img'>
+  <br> 
+</div>
 
 <div align="center">
 
