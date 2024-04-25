@@ -5,8 +5,7 @@
 
 <div align="center">
 
-## Proyecto Data-BI: Proyecto de Reconocimiento de Emociones 
-
+## Proyecto Data-BI: Proyecto de Reconocimiento de Emociones 🤖
 </div>
 
 <div align = "center">
@@ -22,17 +21,17 @@
 </div>
 
 
-### Descripcion
+### Descripcion 🤖
 El proyecto de Reconocimiento de Emociones fue pensado para variadas utilidades; en este caso lo planteamos en el Aula teniendo como objetivo principal analizar y comprender el estado emocional de los estudiantes durante una clase específica, y conocer como se relaciona éste estado emocional con la comprensión de lo enseñado y los resultados finales en las calificaciones. Pudiendo ser un modelo de Machine Learning que ayude a mejorar el proceso de apredizaje. 
 Para lograr esto, se propone grabar las interacciones en el aula y extraer datos relevantes sobre las emociones expresadas por los estudiantes.
 
-### Objetivos 
+### Objetivos 🤖
 * Grabar sesiones de clase para capturar la interacción y las expresiones emocionales de los estudiantes.
 * Analizar los datos recopilados para identificar patrones de emociones dentro del aula.
 * Utilizar técnicas de análisis de datos para comprender cómo las emociones afectan el rendimiento y la participación de los estudiantes.
 * Proponer recomendaciones o intervenciones basadas en los hallazgos para mejorar el ambiente emocional y el aprendizaje en el aula.
 
-### Estructura del proyecto 
+### Estructura del proyecto 🤖
 * data: Contiene los datos utilizados en el proyecto.
     * imagenes: Imágenes utilizadas para el reconocimiento de emociones.
     * pruebas: Contiene videos de las clases grabadas y los resultados del análisis. 
@@ -43,7 +42,7 @@ Para lograr esto, se propone grabar las interacciones en el aula y extraer datos
 * src: Contiene los archivos fuente del proyecto.
     * Archivos .py para la captura de imágenes, entrenamiento del modelo y pruebas.
 
-### Instalacion y uso
+### Instalacion y uso 🤖
 1. Clona este repositorio en tu maquina local
 ```
 git clone https://github.com/tu-usuario/s14-26-ft-data-bi.git
@@ -77,7 +76,7 @@ mkdir emociones
 mkdir reconocidos
 ```
 
-### Contribución
+### Contribución 🤖
 ¡Se agradecen las contribuciones! Si deseas colaborar en el proyecto, por favor sigue estos pasos:
 
 1. Crea una nueva rama (git checkout -b feature/nueva-caracteristica).
@@ -86,7 +85,7 @@ mkdir reconocidos
 4. Abre un Pull Request y describe tus cambios detalladamente.
 
 
-### Contacto
+### Contacto 🤖
 
 | Integrantes | Rol | Contacto
 |------------|------------|------------|
