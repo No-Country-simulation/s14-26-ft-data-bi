@@ -9,10 +9,20 @@
 
 </div>
 
+<div align = "center">
+
+![Static Badge](https://img.shields.io/badge/-Python-333333?style=flat&logo=python)
+![Static Badge](https://img.shields.io/badge/-Pandas-333333?style=flat&logo=pandas)
+![Matplotlib](https://img.shields.io/badge/-Matplotlib-333333?style=flat&logo=matplotlib)
+![Seaborn](https://img.shields.io/badge/-Seaborn-333333?style=flat&logo=seaborn)
+![Scikitlearn](https://img.shields.io/badge/-Scikitlearn-333333?style=flat&logo=scikitlearn)
+![Power BI](https://img.shields.io/badge/-Power%20BI-333333?style=flat&logo=powerbi)
+</div>
 
 
 ### Descripcion
-El proyecto de Reconocimiento de Emociones en el Aula tiene como objetivo principal analizar y comprender el estado emocional de los estudiantes durante una clase específica. Para lograr esto, se propone grabar las interacciones en el aula y extraer datos relevantes sobre las emociones expresadas por los estudiantes.
+El proyecto de Reconocimiento de Emociones fue pensado para variadas utilidades; en este caso lo planteamos en el Aula teniendo como objetivo principal analizar y comprender el estado emocional de los estudiantes durante una clase específica, y conocer como se relaciona éste estado emocional con la comprensión de lo enseñado y los resultados finales en las calificaciones. Pudiendo ser un modelo de Machine Learning que ayude a mejorar el proceso de apredizaje. 
+Para lograr esto, se propone grabar las interacciones en el aula y extraer datos relevantes sobre las emociones expresadas por los estudiantes.
 
 ### Objetivos 
 * Grabar sesiones de clase para capturar la interacción y las expresiones emocionales de los estudiantes.
