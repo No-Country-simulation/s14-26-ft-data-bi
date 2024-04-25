@@ -80,9 +80,11 @@ mkdir reconocidos
 Se utilizaron diferentes videos y datos para entrenar al modelo, comenzando por un dataset de Kaggle con imagenes de emociones que puedes encontrarlo en el siguiente enlace [Link](https://www.kaggle.com/datasets/debanga/facial-expression-recognition-challenge) <br>
 Una vez creado el modelo con la librería Open CV, se utilizó el framework Flet para la creación de una interfaz amigable y fácil de utilizar por el usuario en una escuela por ejemplo; tratando los archivos como locales a fin de lograr mantener privacidad en los datos. Aqui una demostración de su funcionamiento.
 
-<div align="center">
-  <img src='.data/pictures/Video Muestra.gif'>
-  <br>
+<div align = "center">
+  
+[![Alt text](https://img.youtube.com/vi/zhYxQvsIOms/0.jpg)](https://www.youtube.com/watch?v=zhYxQvsIOms)
+ 
+<br>
 </div>
 
 
