@@ -118,6 +118,15 @@ Se creo un reporte con análisis de cada una de las variables presentadas, hasta
   <br> 
 </div>
 
+### Video Explicativo del Proyecto
+
+<div align = "center">
+  
+[![Alt text](https://img.youtube.com/vi/PUp0Lzdx15A/0.jpg)](https://www.youtube.com/watch?v=PUp0Lzdx15A)
+
+<br>
+</div>
+
 ### Contribución 🤖
 ¡Se agradecen las contribuciones! Si deseas colaborar en el proyecto, por favor sigue estos pasos:
 
